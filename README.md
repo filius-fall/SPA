@@ -1,4 +1,4 @@
-# Single Pade Website:
+# Single Page Website:
 
 ----------------------------------------------------------
 
