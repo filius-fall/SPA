@@ -1,5 +1,5 @@
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* If you Dont want scrolling you can change to initial */
 }
 body{
     margin:0;
