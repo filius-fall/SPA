@@ -8,4 +8,4 @@ _This Webiste contains the following topics:_
 2.Closure\
 3.Classes\
 4.Ajax requests\
-5.Singleton instance\
+5.Singleton instance
