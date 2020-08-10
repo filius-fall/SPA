@@ -1,34 +1,75 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Navigation Example</title>
-    <link rel="stylesheet" href="css/mystyle.css">
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="b_css/bootstrap.grid.css"> -->
+</head>
+<body>
+   <header>
+       <div class="overlay"></div>
+       <nav>
+           <h2>Shop</h2>
+           <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li class="cart">
+                   <a href="#cart_page">
+                       <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                   </a>
+               </li>
+           </ul>
+       </nav>
+   </header>
 
-    <!-- <div id="app"></div> -->
-
-    <div id="home">
-      <h1>This is home page</h1>
-    </div>
-
-    <div id="about">
-      <h1>This is about page</h1>
-    </div>
-
-    <div id="contact">
-      <h1>This is contact page</h1>
-    </div>
-
-
+   <div id="home">
+        <div class="container">
+            <div class="image">
+                <img src="css/images/arduino.jpg" alt="arduino">
+                <h3>Arduino UNO</h3>
+                <h3>Rs.500</h3>
+                <a class="add-cart cart1"href="#">Add Cart</a>
+                <input type="hidden" value="15" />
+            </div>
     
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
+            <div class="image">
+                <img src="css/images/relay.jpg" alt="realy">
+                <h3>Relay</h3>
+                <h3>Rs.150</h3>
+                <a class="add-cart cart2"href="#">Add Cart</a>
+                <input type="hidden" value="15" />
+            </div>
+    
+            <div class="image">
+                <img src="css/images/raspi3.jpg" alt="raspi3">
+                <h3>Raspberry pi 3</h3>
+                <h3>Rs.3500</h3>
+                <a class="add-cart cart3"href="#">Add Cart</a>
+                <input type="hidden" value="15" />
+            </div>
+    
+            <div class="image">
+                <img src="css/images/nodemcu.jpg" alt="nodemcu">
+                <h3>NODEMCU</h3>
+                <h3>Rs.200</h3>
+                <a class="add-cart cart4"href="#">Add Cart</a>
+                <input type="hidden" value="15" />
+            </div>
+        </div>
+   </div>
+
+
+   <div id="cart_page">
+        <h1>This is cart page</h1>
+   </div>
+   
+
+   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ 
+</body>
 </html>
