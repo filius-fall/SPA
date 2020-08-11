@@ -20,3 +20,36 @@
 // }
 // loadContent();
 // window.addEventListener("hashchange", loadContent)
+
+
+
+let carts = document.querySelectorAll(".add-cart")
+
+for(let i=0;i<carts.length;i++){
+    carts[i].addEventListener('click',() => {
+        cartsNumber();
+    })
+}
+
+
+function cartsNumber(){
+    let ProductNumber = parseInt(localStorage.getItem('cartNumber'))
+    if(ProductNumber){
+        localStorage.setItem('cartNumber',ProductNumber+1);
+        document.querySelector('.cart span').textContent=ProductNumber+1;
+    }
+    else{
+        localStorage.setItem('cartNumber',1);
+        document.querySelector('.cart span').textContent=1;
+    }
+}
+
+function realcart(){
+    let x = localStorage.getItem('cartNumber')
+    if(x){
+        document.querySelector('.cart span').textContent=x;
+    }
+
+}
+
+realcart();
