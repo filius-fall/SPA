@@ -133,7 +133,33 @@ function totalCost(product){
     } else{
         localStorage.setItem("totalcost", product.price);
     }
+}
 
+function displayCartItems(){
+    console.log("display cart items");
+    let cartItems = localStorage.getItem("productInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector('.products');
+    if (cartItems && productContainer){
+        console.log("inside if");
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            console.log("inside obj");
+            productContainer.innerHTML += `
+            <div class="product">
+                <ion-icon name="close"></ion-icon>
+                <img src="./css/images/${item.tag}.jpg">
+                <span>${item.name}</span>
+            </div>
+
+            <div class="price">${item.price}</div>
+            <div class="quantity">${item.inCart}</div>
+            <div class="total">${item.inCart * item.price}</div>
+            `
+        });
+
+    } 
 }
 
 realcart();
+displayCartItems();
